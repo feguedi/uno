@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import axios from 'axios'
-import useSocket from '../hooks/useSocket'
+import useSocket from '../hooks/useSockets'
 
-export default function ChatOne(props) {
+const ChatOne = props => {
     const [field, setField] = useState('')
     const [newMessage, setNewMessage] = useState(0)
     const [messages, setMessages] = useState(props.messages || [])
@@ -68,3 +68,5 @@ ChatOne.getInitialProps = async () => {
     const messages = await (await axios.get(`${ process.env.SERVER_HOST }/messages/chat2`)).data
     return { messages }
 }
+
+export default ChatOne

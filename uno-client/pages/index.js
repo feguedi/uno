@@ -3,7 +3,7 @@ import Link from 'next/link'
 import axios from 'axios'
 import useSocket from '../hooks/useSockets'
 
-export default ChatOne = props => {
+const ChatOne = props => {
     const [field, setField] = useState('')
     const [newMessage, setNewMessage] = useState(0)
     const [messages, setMessages] = useState(props.messages || [])
@@ -35,6 +35,7 @@ export default ChatOne = props => {
                 <Link href="/">
                     <a>{ 'Chat one' }</a>
                 </Link>
+                <br />
                 <Link href="/clone">
                     <a>{ `Chat two${ newMessage > 0 ? `(${ newMessage } new message)` : '' }` }</a>
                 </Link>
@@ -61,3 +62,5 @@ ChatOne.getInitialProps = async () => {
     const messages = await (await axios.get(`${ process.env.SERVER_HOST }/messages/chat1`)).data
     return { messages }
 }
+
+export default ChatOne

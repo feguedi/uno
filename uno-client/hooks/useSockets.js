@@ -1,14 +1,14 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import io from 'socket.io-client'
 
-const socket = io()
-
-export default useSockets = (e, cb) => {
+export default (e, cb) => {
+    const [socket, setSocket] = useState(io())
     useEffect(() => {
         socket.on(e, cb)
-        return useSocketCleanup = () => {
+        const useSocketCleanup = () => {
             socket.off(e, cb)
         }
+        return useSocketCleanup
     }, [e, cb])
     return socket
 }

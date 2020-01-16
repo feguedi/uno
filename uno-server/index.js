@@ -1,8 +1,9 @@
 const app = require('express')()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
+const { PORT } = require('./config')
 
-const port = parseInt(process.env.PORT, 10) || 8000
+const port = parseInt(PORT, 10) || 8000
 
 const messages = {
     chat1: [],
