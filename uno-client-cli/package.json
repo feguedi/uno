@@ -1,0 +1,15 @@
+{
+  "name": "uno-client-cli",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index",
+    "nodemon": "nodemon index -e js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "yargs": "^15.1.0"
+  }
+}
