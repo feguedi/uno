@@ -1,0 +1,16 @@
+{
+  "name": "uno-server-tcp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "nodemon": "nodemon index -e js,mjs"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

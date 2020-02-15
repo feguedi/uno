@@ -105,3 +105,9 @@ dist
 
 # PNPM files
 pnpm-lock.yaml
+
+# Mac files
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
