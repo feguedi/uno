@@ -12,7 +12,7 @@ const GameSchema = new Schema({
         ref: 'Player'
     },
     players: [{
-        nickname: {
+        player: {
             type: Schema.Types.ObjectId,
             ref: 'Player'
         },

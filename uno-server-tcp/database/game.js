@@ -1,6 +1,10 @@
 const { EventEmitter } = require('events')
 const gameEvents = new EventEmitter()
 
+gameEvents.once('newwaitroom', () => {
+
+})
+
 gameEvents.on('addPlayer', data => {
 
 })
@@ -30,6 +34,18 @@ gameEvents.on('reverse', (player, players) => {
 })
 
 gameEvents.on('uno', player => {
+
+})
+
+gameEvents.once('setwinner', player => {
+
+})
+
+gameEvents.on('badMove', message => {
+
+})
+
+gameEvents.on('error', message => {
 
 })
 
