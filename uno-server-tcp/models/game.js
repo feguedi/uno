@@ -6,6 +6,11 @@ const colors = {
     message: '{VALUE} it\'s not a valid color'
 }
 
+const actions = {
+    values: ['draw2', 'reverse', 'skip', 'draw4'],
+    message: '{VALUE} it\'s not a valid action'
+}
+
 const GameSchema = new Schema({
     winner: {
         type: Schema.Types.ObjectId,
@@ -37,6 +42,10 @@ const GameSchema = new Schema({
             type: Number,
             min: 0,
             max: 9
+        },
+        lastAction: {
+            type: String,
+            enum: actions
         },
         startAt: {
             type: Date,

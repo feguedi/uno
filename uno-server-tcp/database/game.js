@@ -1,15 +1,16 @@
 const { EventEmitter } = require('events')
 const gameEvents = new EventEmitter()
+const waitingRoomEvents = new EventEmitter()
 
-gameEvents.once('newwaitroom', () => {
-
-})
-
-gameEvents.on('addPlayer', data => {
+waitingRoomEvents.once('newwaitroom', () => {
 
 })
 
-gameEvents.on('retiredPlayer', player => {
+waitingRoomEvents.on('addPlayer', data => {
+
+})
+
+waitingRoomEvents.on('retirePlayer', player => {
 
 })
 
@@ -49,4 +50,7 @@ gameEvents.on('error', message => {
 
 })
 
-module.exports = gameEvents
+module.exports = {
+    gameEvents,
+    waitingRoomEvents
+}
