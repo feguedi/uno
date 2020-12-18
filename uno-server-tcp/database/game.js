@@ -2,7 +2,7 @@ const { EventEmitter } = require('events')
 const gameEvents = new EventEmitter()
 const waitingRoomEvents = new EventEmitter()
 
-waitingRoomEvents.once('newwaitroom', () => {
+waitingRoomEvents.once('newWaitingRoom', () => {
 
 })
 
@@ -38,7 +38,7 @@ gameEvents.on('uno', player => {
 
 })
 
-gameEvents.once('setwinner', player => {
+gameEvents.once('setWinner', player => {
 
 })
 
