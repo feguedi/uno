@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>qml/card.qml</file>
+        <file>sandbox.qml</file>
     </qresource>
 </RCC>
